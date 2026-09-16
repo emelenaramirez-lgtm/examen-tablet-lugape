@@ -1,0 +1,171 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #eef3f7;
+  color: #1f2933;
+  font-size: 18px;
+  line-height: 1.55;
+}
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #1f4e78;
+  color: white;
+  padding: 14px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+.topbar h1 { margin: 0; font-size: 22px; }
+.topbar p { margin: 2px 0 0; font-size: 14px; opacity: .9; }
+.status {
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.status.offline { background: #7f1d1d; }
+.status.online { background: #166534; }
+.container { max-width: 980px; margin: 0 auto; padding: 18px 12px 50px; }
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 5px rgba(0,0,0,.08);
+}
+.card h2 { margin: 0 0 10px; color: #1f4e78; font-size: 23px; }
+.question h2 { display: inline-block; min-width: 34px; }
+.question p { margin: 5px 0 16px; }
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 180px 180px;
+  gap: 14px;
+}
+label { font-weight: 700; font-size: 16px; }
+input, select {
+  display: block;
+  width: 100%;
+  margin-top: 6px;
+  min-height: 50px;
+  border: 2px solid #b9c5d0;
+  border-radius: 8px;
+  padding: 9px 12px;
+  font-size: 20px;
+  background: #fff;
+}
+input:focus, select:focus {
+  outline: none;
+  border-color: #1f4e78;
+  box-shadow: 0 0 0 2px rgba(31,78,120,.12);
+}
+.num { text-align: center; }
+.answer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 310px;
+  margin-top: 10px;
+}
+.answer input { flex: 1; }
+.answer span { font-weight: 700; min-width: 40px; }
+.save-note, .small-note, .sync-info {
+  font-size: 14px;
+  color: #52606d;
+  margin-bottom: 0;
+}
+.table-wrap { overflow-x: auto; margin-top: 15px; }
+.freq-table {
+  width: 100%;
+  min-width: 650px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.freq-table th, .freq-table td {
+  border: 1px solid #b9a06a;
+  text-align: center;
+  padding: 7px;
+}
+.freq-table thead th {
+  background: #f5d99b;
+  color: #222;
+}
+.freq-table tbody th {
+  background: #fff8e7;
+  font-weight: 700;
+}
+.freq-table input {
+  margin: 0;
+  min-height: 45px;
+  border: 1px solid #9ca9b5;
+  border-radius: 5px;
+}
+.fixed {
+  display: inline-block;
+  min-height: 45px;
+  padding: 7px 3px;
+  font-weight: 700;
+}
+.graph-box { text-align: center; margin: 14px 0; }
+.graph-box img { max-width: 330px; width: 70%; height: auto; }
+.submit-card {
+  background: white;
+  border-radius: 12px;
+  padding: 22px;
+  text-align: center;
+  box-shadow: 0 1px 5px rgba(0,0,0,.08);
+}
+button {
+  border: 0;
+  border-radius: 9px;
+  background: #1f4e78;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 15px 25px;
+  min-height: 54px;
+  cursor: pointer;
+}
+button:active { transform: scale(.99); }
+.validation { color: #b42318; font-weight: 700; min-height: 25px; }
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+}
+.hidden { display: none; }
+.modal-card {
+  background: white;
+  border-radius: 16px;
+  max-width: 460px;
+  width: 100%;
+  padding: 30px;
+  text-align: center;
+}
+.check {
+  width: 60px; height: 60px; margin: 0 auto 15px;
+  border-radius: 50%; background: #166534; color: white;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 34px; font-weight: 700;
+}
+.modal-card h2 { margin: 0 0 5px; color: #1f4e78; }
+.sync-message { font-size: 14px; color: #52606d; }
+@media (max-width: 700px) {
+  body { font-size: 17px; }
+  .topbar { position: static; align-items: flex-start; }
+  .topbar h1 { font-size: 18px; }
+  .form-grid { grid-template-columns: 1fr; }
+  .card { padding: 15px; }
+  .answer { max-width: 100%; }
+  .graph-box img { width: 85%; }
+}

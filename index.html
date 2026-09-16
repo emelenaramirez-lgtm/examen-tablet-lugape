@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#1f4e78">
+  <title>Evaluando mis conocimientos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>EVALUANDO MIS CONOCIMIENTOS</h1>
+      <p>Evaluación digital</p>
+    </div>
+    <div id="connectionStatus" class="status offline">SIN INTERNET</div>
+  </header>
+
+  <main class="container">
+    <section id="datos" class="card">
+      <h2>Datos del estudiante</h2>
+      <div class="form-grid">
+        <label>
+          Nombres y apellidos
+          <input id="nombre" type="text" autocomplete="name" placeholder="Escribe tus nombres y apellidos">
+        </label>
+        <label>
+          Grado
+          <select id="grado">
+            <option value="">Selecciona</option>
+            <option>1°</option><option>2°</option><option>3°</option>
+            <option>4°</option><option>5°</option>
+          </select>
+        </label>
+        <label>
+          Sección
+          <select id="seccion">
+            <option value="">Selecciona</option>
+            <option>A</option><option>B</option><option>C</option>
+            <option>D</option><option>E</option>
+          </select>
+        </label>
+      </div>
+      <p class="save-note">Tus respuestas se guardan automáticamente en esta tablet.</p>
+    </section>
+
+    <form id="examForm" autocomplete="off">
+      <section class="card question">
+        <h2>1.</h2>
+        <p>Una pareja de esposos solicita un crédito vehicular por un monto de $ 13 500 para la compra de un automóvil 0 km. La entidad le cobra una tasa de interés del 18 % anual por un periodo de tres años. ¿Cuánto pagará de intereses al finalizar el préstamo?</p>
+        <div class="answer"><input class="num" data-q="1" inputmode="decimal" type="text"><span>$</span></div>
+      </section>
+
+      <section class="card question">
+        <h2>2.</h2>
+        <p>Sebastián resolvió cierto número de problemas en tres días. Si el primer día resolvió 3/10 lo del total; al día siguiente, 4/7 del resto, y el último día, los 18 problemas restantes, ¿cuántos problemas resolvió en los tres días?</p>
+        <div class="answer"><input class="num" data-q="2" inputmode="numeric" type="text"><span>problemas</span></div>
+      </section>
+
+      <section class="card question">
+        <h2>3.</h2>
+        <p>Desde un punto B del suelo, se observa el punto más alto C de una torre con un ángulo de 60°. Retrocediendo 15 m, se ve el mismo punto con un ángulo de 30°. Halla la altura de la torre.</p>
+        <div class="answer"><input class="num" data-q="3" inputmode="decimal" type="text"><span>m</span></div>
+      </section>
+
+      <section class="card question">
+        <h2>4.</h2>
+        <p>La cantidad de figuritas que tiene Tamara excede en 10 a la cantidad de figuritas que tiene Sofía. Si entre las dos tienen 90 figuritas, ¿cuántas figuritas tiene Tamara?</p>
+        <div class="answer"><input class="num" data-q="4" inputmode="numeric" type="text"><span>figuritas</span></div>
+      </section>
+
+      <section class="card question">
+        <h2>5.</h2>
+        <p>Manuel decide hacer una casa prefabricada en 18 días, pero tardó 6 días más por trabajar 2 horas menos cada día. ¿Cuántas horas diarias trabajó?</p>
+        <div class="answer"><input class="num" data-q="5" inputmode="numeric" type="text"><span>horas diarias</span></div>
+      </section>
+
+      <section class="card question">
+        <h2>6.</h2>
+        <p>Andrés ha estado visitando tiendas de venta de electrodomésticos en línea y en la tienda Vive Bonito ha quedado sorprendido por la oferta de una cocina que se encontraba al 40 % de descuento; y si la compra se realizaba en línea, utilizando la tarjeta de la tienda, había un 10 % de descuento adicional. Si el precio de venta de la cocina era de S/ 1699, ¿cuál será el descuento único?</p>
+        <div class="answer"><input class="num" data-q="6" inputmode="decimal" type="text"><span>%</span></div>
+      </section>
+
+      <section class="card question">
+        <h2>7.</h2>
+        <p>La tabla presenta información parcial sobre el peso de 40 niños. Complétala y responde preguntas 8 y 9.</p>
+
+        <div class="table-wrap">
+          <table class="freq-table">
+            <thead>
+              <tr>
+                <th>Peso (kg)</th>
+                <th>X<sub>i</sub></th>
+                <th>f<sub>i</sub></th>
+                <th>h<sub>i</sub></th>
+                <th>F<sub>i</sub></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>[10 - 15[</th>
+                <td><input class="num table-input" data-q="7_Xi_1" inputmode="decimal" type="text"></td>
+                <td><input class="num table-input" data-q="7_fi_1" inputmode="decimal" type="text"></td>
+                <td><span class="fixed">0,15</span></td>
+                <td><input class="num table-input" data-q="7_Fi_1" inputmode="decimal" type="text"></td>
+              </tr>
+              <tr>
+                <th>[15 - 20[</th>
+                <td><input class="num table-input" data-q="7_Xi_2" inputmode="decimal" type="text"></td>
+                <td><input class="num table-input" data-q="7_fi_2" inputmode="decimal" type="text"></td>
+                <td><input class="num table-input" data-q="7_hi_2" inputmode="decimal" type="text"></td>
+                <td><span class="fixed">18</span></td>
+              </tr>
+              <tr>
+                <th>[20 - 25[</th>
+                <td><input class="num table-input" data-q="7_Xi_3" inputmode="decimal" type="text"></td>
+                <td><span class="fixed">20</span></td>
+                <td><input class="num table-input" data-q="7_hi_3" inputmode="decimal" type="text"></td>
+                <td><input class="num table-input" data-q="7_Fi_3" inputmode="decimal" type="text"></td>
+              </tr>
+              <tr>
+                <th>[25 - 30]</th>
+                <td><span class="fixed">27,5</span></td>
+                <td><input class="num table-input" data-q="7_fi_4" inputmode="decimal" type="text"></td>
+                <td><input class="num table-input" data-q="7_hi_4" inputmode="decimal" type="text"></td>
+                <td><input class="num table-input" data-q="7_Fi_4" inputmode="decimal" type="text"></td>
+              </tr>
+              <tr>
+                <th>Total</th>
+                <td><span class="fixed"></span></td>
+                <td><input class="num table-input" data-q="7_fi_total" inputmode="decimal" type="text"></td>
+                <td><input class="num table-input" data-q="7_hi_total" inputmode="decimal" type="text"></td>
+                <td><span class="fixed"></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="card question">
+        <h2>8.</h2>
+        <p>¿Cuál es la frecuencia relativa de los niños que pesan menos de 20 kg?</p>
+        <div class="answer"><input class="num" data-q="8" inputmode="decimal" type="text"><span></span></div>
+      </section>
+
+      <section class="card question">
+        <h2>9.</h2>
+        <p>¿Qué porcentaje representa la cantidad de niños que pesan más de 20 kilogramos?</p>
+        <div class="answer"><input class="num" data-q="9" inputmode="decimal" type="text"><span>%</span></div>
+      </section>
+
+      <section class="card question">
+        <h2>10.</h2>
+        <p>El gráfico de sectores muestra la preferencia del público por los candidatos A, B y C a la alcaldía de su distrito. Si los simpatizantes del candidato B son 6000 personas, ¿cuántas personas fueron encuestadas?</p>
+        <div class="graph-box">
+          <img src="grafico_pregunta10.png" alt="Gráfico de sectores de la pregunta 10">
+        </div>
+        <div class="answer"><input class="num" data-q="10" inputmode="numeric" type="text"><span>personas</span></div>
+      </section>
+
+      <section class="card question">
+        <h2>11.</h2>
+        <p>Ana observa su recibo de internet y se da cuenta que tiene que pagar más de lo que pensaba, ya que no había considerado el 18% de IGV. Si el monto sin IGV es S/. 86, ¿cuánto tiene que pagar?</p>
+        <div class="answer"><input class="num" data-q="11" inputmode="decimal" type="text"><span>S/.</span></div>
+      </section>
+
+      <section class="card question">
+        <h2>12.</h2>
+        <p>El costo de fabricación de un producto es S/. 400 y se vende al comerciante ganando el 20%. Si el comerciante vende el producto al consumidor con una ganancia del 20% sobre su precio de compra, ¿cuánto pagará el consumidor por el producto?</p>
+        <div class="answer"><input class="num" data-q="12" inputmode="decimal" type="text"><span>S/.</span></div>
+      </section>
+
+      <section class="card question">
+        <h2>13.</h2>
+        <p>Paulina vendió dos lavadoras a S/. 1 200 cada una. Si en la venta de la primera lavadora ganó el 20% y en la venta de la segunda perdió el 20%, ¿cuánto ganó o perdió en total?</p>
+        <div class="answer"><input class="num" data-q="13" inputmode="decimal" type="text"><span>S/.</span></div>
+        <p class="small-note">Escribe solo el número de la respuesta.</p>
+      </section>
+
+      <section class="card question">
+        <h2>14.</h2>
+        <p>A una fiesta concurren 400 personas entre hombres y mujeres, asistiendo 3 hombres por cada 2 mujeres. Luego de 2 horas, por cada 2 hombres hay una mujer. ¿Cuántas parejas se retiraron?</p>
+        <div class="answer"><input class="num" data-q="14" inputmode="numeric" type="text"><span>parejas</span></div>
+      </section>
+
+      <section class="card question">
+        <h2>15.</h2>
+        <p>Las edades de Carla y Ricardo están en relación de 7 a 5, respectivamente. Si dentro de 9 años estarán en la relación de 5 a 4, ¿Cuál es la edad de Carla?</p>
+        <div class="answer"><input class="num" data-q="15" inputmode="numeric" type="text"><span>años</span></div>
+      </section>
+
+      <section class="submit-card">
+        <p id="validationMessage" class="validation"></p>
+        <button id="saveButton" type="button">FINALIZAR EXAMEN</button>
+        <p class="sync-info">Primero se guardará en la tablet. Si hay Internet y está configurada la sincronización, también se enviará a Google Sheets.</p>
+      </section>
+    </form>
+  </main>
+
+  <div id="finalModal" class="modal hidden">
+    <div class="modal-card">
+      <div class="check">✓</div>
+      <h2>Examen finalizado.</h2>
+      <p>Sus respuestas han sido guardadas.</p>
+      <p id="syncMessage" class="sync-message"></p>
+      <button id="closeModal">Aceptar</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
