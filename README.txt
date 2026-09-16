@@ -1,4 +1,4 @@
-# EXAMEN DIGITAL PARA TABLETS - LUGAPE
+# EXAMEN DIGITAL PARA TABLETS - LUGAPE.
 
 ## Archivos
 - index.html: página del examen.
