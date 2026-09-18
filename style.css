@@ -169,3 +169,46 @@ button:active { transform: scale(.99); }
   .answer { max-width: 100%; }
   .graph-box img { width: 85%; }
 }
+
+/* Diagnóstico previo de la tablet */
+.tablet-check { border: 2px solid #d8e2eb; }
+.tablet-check-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+.tablet-check-header h2 { margin-bottom: 4px; }
+.tablet-ready {
+  flex: 0 0 auto;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.tablet-ready.pending { background: #e5e7eb; color: #374151; }
+.tablet-ready.ready { background: #dcfce7; color: #166534; border: 1px solid #86efac; }
+.tablet-ready.review { background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
+.prepare-button { width: 100%; background: #0f766e; }
+.prepare-button:disabled { opacity: .7; cursor: wait; }
+.check-results { margin-top: 16px; display: grid; gap: 8px; }
+.check-results.hidden { display: none; }
+.check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+}
+.check-item.ok { background: #f0fdf4; color: #166534; }
+.check-item.fail { background: #fef2f2; color: #991b1b; }
+.check-item .detail { display: block; font-size: 12px; font-weight: 400; margin-top: 2px; }
+@media (max-width: 700px) {
+  .tablet-check-header { flex-direction: column; }
+  .tablet-ready { align-self: flex-start; }
+  .prepare-button { font-size: 17px; padding-left: 12px; padding-right: 12px; }
+}

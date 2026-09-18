@@ -1,4 +1,4 @@
-# EXAMEN DIGITAL PARA TABLETS - LUGAPE.
+# EXAMEN DIGITAL PARA TABLETS - LUGAPE
 
 ## Archivos
 - index.html: página del examen.
@@ -32,3 +32,24 @@ IMPORTANTE:
 - La sincronización necesita que la tablet tenga Internet en algún momento.
 - El envío usa POST y modo no-cors; el examen no necesita leer una respuesta del servidor.
 - Antes de usar con 100 estudiantes, hacer una prueba con 2 o 3 tablets.
+
+## Botón PREPARAR TABLET PARA EL EXAMEN
+Antes de entregar cada tablet:
+1. Abre index.html.
+2. Pulsa PREPARAR TABLET PARA EL EXAMEN.
+3. Debe aparecer: 🟢 TABLET LISTA.
+4. Si aparece 🔴 REVISAR CONFIGURACIÓN, revisa el elemento marcado con ❌.
+
+El diagnóstico comprueba:
+- carga correcta de index.html;
+- funcionamiento de localStorage;
+- permiso/capacidad de almacenamiento del navegador;
+- funcionamiento de las 14 casillas editables de la tabla 7;
+- guardado y recuperación de nombre, grado y sección;
+- configuración de la URL /exec de Google Apps Script.
+
+La prueba usa datos temporales y restaura el borrador que ya exista, por lo que no debe borrar respuestas del estudiante.
+
+
+V3: CSS integrado en index.html. El examen funciona en modo offline; Internet solo se usa para sincronizar con Google Apps Script.
+SYNC_URL configurada con la implementación proporcionada.
